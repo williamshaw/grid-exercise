@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=en-ca>
+<head>
+  <meta charset=utf-8>
+  <title>{% if page.title %}{{page.title}} · {%endif%}Uniforms{% if page.title == null %}—not every colour survives{% endif %}</title>
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="240">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/general.css" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+</head>
+<body>
+
+  <header class="banner">
+    <h1 class="logo"><a href="index.html" class="logo-link">Uniforms</a></h1>
+    <nav class="nav-wrapper">
+      <ul class="nav nav-primary">
+        <li><a href="captain.html" class="nav-link nav-primary-link captain {% if page.url contains 'captain' %}nav-selected{% endif %}">Captain</a></li>
+        <li><a href="command.html" class="nav-link nav-primary-link command {% if page.url contains 'command' %}nav-selected{% endif %}">Command</a></li>
+        <li><a href="sciences.html" class="nav-link nav-primary-link sciences {% if page.url contains 'sciences' %}nav-selected{% endif %}">Sciences</a></li>
+        <li><a href="operations.html" class="nav-link nav-primary-link operations {% if page.url contains 'operations' %}nav-selected{% endif %}">Operations</a></li>
+      </ul>
+    </nav>
+    <p class="page-head {% if page.title %}{{page.title|downcase}}{% endif %}">{% if page.title %}{{page.title}}{% else %}not every colour survives{% endif %}</p>
+  </header>
+
+  {{content}}
+
+  <footer class="footer">
+    <p class="copyright">© 2013 Uniforms</p>
+
+    <nav>
+      <ul class="nav nav-secondary">
+        <li><a href="captain.html" class="nav-link">Captain</a></li>
+        <li><a href="command.html" class="nav-link">Command</a></li>
+        <li><a href="sciences.html" class="nav-link">Sciences</a></li>
+        <li><a href="operations.html" class="nav-link">Operations</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
